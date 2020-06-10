@@ -45,6 +45,25 @@ export const firestore = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(provider)
+   
 
-  export default firebase;
+
+//   export const signInWithGoogle=()=>auth.signInWithPopup(provider).then(function(result) {
+  
+//     var user = result.user;
+   
+//     var credential = result.credential;
+//   }, function(error) {
+   
+//     var email = error.email;
+//     var credential = error.credential;
+ 
+//   if (error.code === 'auth/account-exists-with-different-credential') {
+//     auth.fetchSignInMethodsForEmail(email).then(function(providers) {
+    
+//     });
+//   }
+// });
+
+export default firebase;
